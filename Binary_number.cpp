@@ -10,10 +10,17 @@ void printBinary(int a)
 }
 int main()
 {
-    int a = 2;
+    int a = 9;
     int i = 1;
     printBinary(a);
 
-    (a & (1 << i) != 0) ? cout << "setbit\n" : cout << "notsetbit\n";
+    ((a & (1 << i)) != 0) ? cout << "set_bit\n" : cout << "not_set_bit\n";
+
+    printBinary(a | (1 << i));    // bit set -> convert
+    printBinary(a & (~(1 << i))); // bit unset -> convert
+
+    printBinary(a ^ (1 << i)); // toggle means -> xor
+    printBinary(a ^ (1 << 3)); // xor -> same==0, not_same==1
+
     return 0;
 }
