@@ -11,10 +11,10 @@ void printBinary(int a)
 int main()
 {
     int a = 5;
-    int i = 2;
+    int i = 2; // kth number
     printBinary(a);
 
-    ((a >> i) & 1 != 0) ? cout << "set_bit\n" : cout << "not_set_bit\n";
+    ((a >> i) & 1 != 0) ? cout << "set_bit_on\n" : cout << "unset_bit_off\n";
 
     printBinary(a | (1 << i));    // bit set -> convert
     printBinary(a & (~(1 << i))); // bit unset -> convert
