@@ -20,7 +20,7 @@ int main()
     printBinary(a | (1 << k));    // bit set -> convert
     printBinary(a & (~(1 << k))); // bit unset -> convert
 
-    printBinary(a ^ (1 << k)); // toggle means -> xor
+    printBinary(a ^ (1 << k)); // toggle means -> no takle off, off takle on kora
     printBinary(a ^ (1 << 3)); // xor -> same==0, not_same==1
 
     return 0;
