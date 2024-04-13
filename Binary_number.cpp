@@ -22,6 +22,9 @@ int main()
 
     printBinary(a ^ (1 << k)); // toggle means -> no takle off, off takle on kora
     printBinary(a ^ (1 << 3)); // xor -> same==0, not_same==1
+    
+    int x = __builtin_popcount(a); // count set bit
+    cout << x << endl;
 
     return 0;
 }
